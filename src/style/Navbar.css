@@ -1,0 +1,16 @@
+@media (max-width: 991.98px) {
+  .custom-mobile-menu {
+    background-color: rgba(0, 0, 0, 0.95); /* dark semi-transparent */
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .custom-mobile-menu .nav-link {
+    color: #ffc107 !important; /* Yellow color for better contrast */
+    font-weight: 500;
+  }
+
+  .custom-mobile-menu .nav-link:hover {
+    color: #fff !important;
+  }
+}

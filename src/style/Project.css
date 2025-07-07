@@ -1,0 +1,52 @@
+.project-section {
+  background-image: url('../assets/intro-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  z-index: 1;
+}
+
+.project-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.card-title,
+.card-text,
+h2 {
+  color: black;
+}
+.container h2{
+     color: white;
+}
+.btn-warning {
+  color: #000;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+.btn-outline-dark {
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,27 @@
+/* About.css */
+.about-section {
+  background-color: #111;
+  color: #fff;
+}
+
+.about-section h2 {
+  color: #ffc107;
+}
+
+.about-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid #ffc107;
+  margin-top: 20px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,24 @@
+/* Unauthrized.css */
+.unauth-page {
+  height: 100vh;
+  background-color: #111;
+  color: white;
+}
+
+.unauth-box {
+  max-width: 500px;
+  background-color: #222;
+}
+
+.unauth-box h1 {
+  font-size: 2rem;
+}
+
+.unauth-box p {
+  font-size: 1.1rem;
+}
+
+.unauth-box a:hover {
+  background-color: #e0a800;
+  color: black;
+}

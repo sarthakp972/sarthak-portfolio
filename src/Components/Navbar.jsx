@@ -18,9 +18,12 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed top-0 start-0 w-100 z-3 py-3">
       <div className="container">
-        <Link className="navbar-brand fw-bold text-white fs-4" to="/">
-          Portfolio.
-        </Link>
+      <Link className="navbar-brand fw-bold fs-4 text-white" to="/">
+  <span className="text-warning">sarthak</span>
+  <span className="text-white">-Portfolio.</span>
+</Link>
+
+
         <button
           className="navbar-toggler border-0"
           type="button"

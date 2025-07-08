@@ -14,7 +14,7 @@ export default function Contact() {
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     if (!serviceID || !templateID || !publicKey) {
-      alert("EmailJS environment variables are missing or invalid.");
+      alert("Somthing went wrorng");
       return;
     }
 

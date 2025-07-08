@@ -1,4 +1,4 @@
-// Footer.jsx
+
 import React from "react";
 import "../style/Footer.css";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";

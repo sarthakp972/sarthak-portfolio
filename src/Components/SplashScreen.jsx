@@ -18,7 +18,11 @@ export default function SplashScreen({ onFinish }) {
         <span className="text-white">-Portfolio</span>
         <span className="text-warning sarthak-dots"></span>
       </h1>
+
+      {/* Tagline / Short Message */}
+      <p className="sarthak-splash-tagline">
+        Delivering modern, scalable, and client-focused web solutions.
+      </p>
     </div>
   );
 }
-    

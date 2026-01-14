@@ -59,7 +59,7 @@ export default function About() {
               </Link>
 
               <a
-                href="/Sarthak-Resume-CV-2025.pdf"
+                href="/Sarthak_Patwa_FullStack_Developer_2026.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"

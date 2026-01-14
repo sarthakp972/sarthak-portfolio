@@ -5,10 +5,17 @@
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+  align-items: center;     /* centers content horizontally */
+  /* padding-top: 60px;  */
+ 
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  background: rgba(0, 0, 0, 0.7);
   height: 100%;
   width: 100%;
   display: flex;
@@ -20,12 +27,116 @@
   padding: 0 20px;
 }
 
+/* Buttons */
 .hero-buttons .btn {
   font-size: 1.1rem;
   border-radius: 50px;
   transition: all 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .hero-buttons .btn:hover {
   transform: translateY(-2px);
 }
+
+/* Freelance/Industry Badges */
+.hero-highlights .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.hero-highlights .badge:hover {
+  transform: scale(1.05);
+}
+
+/* Stats */
+.hero-stats span {
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .skills{
+  margin-top: 70px;
+}
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h5 {
+    font-size: 0.9rem;
+  }
+
+  .hero-highlights .badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .hero-stats span {
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h5 {
+    font-size: 0.8rem;
+  }
+
+  .hero-highlights .badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .hero-stats span {
+    font-size: 0.75rem;
+  }
+}
+
+
+/* Special Offer Message */
+.hero-offer {
+  font-size: 1rem;
+  color: #fff;
+  backdrop-filter: blur(5px); /* subtle frosted glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-offer:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.hero-offer h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero-offer p {
+  font-size: 0.95rem;
+}
+
+
+
+
+/* Mobile Responsiveness already handled by Bootstrap grid (col-md-4 col-sm-12) */

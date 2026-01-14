@@ -26,9 +26,9 @@ const sendEmail = (e) => {
     .then(
       () => {
         alert(
-          "Your message has been submitted successfully 🎉\n\nHowever Email service may be delayed.\n\n👉 You can also directly ping me at:\n📧 Email: sarthakpatwa7649@gmail.com\n📱 WhatsApp: 7649062706\n\n💬 Please mention: 'I reached out via your portfolio website'"
+          "Your message has been submitted successfully 🎉\n\nHowever Email service may be delayed.\n\n👉 You can also directly ping me at:\n📧 Email: sarthakpatwa7649@gmail.com\n📱 WhatsApp: 7649062706\n\n💬 Please mention: 'I reached out via your portfolio website '"
         );
-        e.target.reset();
+        e.target.reset(); 
       },
       (error) => {
         console.error("EmailJS Error:", error);

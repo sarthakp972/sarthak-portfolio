@@ -1,28 +1,43 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../style/Navbar.css";
+import SplashScreen from "./SplashScreen";
 
 export default function Navbar() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showSplash, setShowSplash] = useState(false);
 
-  const handleToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const navigate = useNavigate();
 
-  const handleLinkClick = () => {
+  const handleToggle = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleNavClick = (path) => {
     setIsMenuOpen(false);
+    setShowSplash(true);
+
+    setTimeout(() => {
+      setShowSplash(false);
+      navigate(path);
+    }, 2000);
   };
+
+  if (showSplash) {
+    return <SplashScreen />;
+  }
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-transparent position-fixed top-0 start-0 w-100 z-3 py-3">
       <div className="container">
-      <Link className="navbar-brand fw-bold fs-4 text-white" to="/">
-  <span className="text-warning">sarthak</span>
-  <span className="text-white">-Portfolio.</span>
-</Link>
 
+        <button
+          className="navbar-brand fw-bold fs-4 text-white bg-transparent border-0"
+          onClick={() => handleNavClick("/")}
+        >
+          <span className="text-warning">sarthak</span>
+          <span className="text-white">-Portfolio.</span>
+        </button>
 
         <button
           className="navbar-toggler border-0"
@@ -35,32 +50,38 @@ export default function Navbar() {
         </button>
 
         <div
-          className={`collapse navbar-collapse justify-content-end custom-mobile-menu ${
-            isMenuOpen ? "show" : ""
-          }`}
-          id="navbarNav"
+          className={`collapse navbar-collapse justify-content-end custom-mobile-menu ${isMenuOpen ? "show" : ""}`}
         >
           <ul className="navbar-nav gap-3">
+
             <li className="nav-item">
-                <Link className="nav-link text-white" to="/" onClick={handleLinkClick}>
+              <button className="nav-link text-white bg-transparent border-0"
+                onClick={() => handleNavClick("/")}>
                 Home
-              </Link>
+              </button>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/projects" onClick={handleLinkClick}>
+              <button className="nav-link text-white bg-transparent border-0"
+                onClick={() => handleNavClick("/projects")}>
                 Projects
-              </Link>
+              </button>
             </li>
+
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/about" onClick={handleLinkClick}>
+              <button className="nav-link text-white bg-transparent border-0"
+                onClick={() => handleNavClick("/about")}>
                 About
-              </Link>
+              </button>
             </li>
+
             <li className="nav-item">
-                <Link className="nav-link text-white" to="/contact" onClick={handleLinkClick}>
+              <button className="nav-link text-white bg-transparent border-0"
+                onClick={() => handleNavClick("/contact")}>
                 Contact
-              </Link>
+              </button>
             </li>
+
           </ul>
         </div>
       </div>

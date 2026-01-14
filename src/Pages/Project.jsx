@@ -1,9 +1,18 @@
 // Project.jsx
 
+import { useEffect, useState } from "react";
+// import SplashScreen from "../Components/SplashScreen";
 import "../style/Project.css";
 import { motion } from "framer-motion";
 
 const projectData = [
+  {
+  title: "Bushra Mehendi Art",
+  description: "I developed a customized Mehendi booking website as a freelance project, fully tailored to the client’s requirements. The site includes modern UI, service details, and inquiry features. I successfully deployed the website on GoDaddy hosting..",
+  stack: ["React", "Firebase", "Cloudinary", "Bootstrap"],
+  github: "https://github.com/sarthakp972/my-app",
+  live: "https://bushramehndiart.com"
+  },
 {
   title: "Patwa Bartan - Utensils eCommerce",
   description: "An in-progress React and Firebase-based eCommerce platform for utensils. Features include inventory system, admin/user login, Cloudinary image management, Hindi language UI, and a clean Bootstrap design.",
@@ -110,8 +119,25 @@ const projectData = [
 ];
 
 export default function Project() {
+  //   // NEW — splash control
+  // const [showSplash, setShowSplash] = useState(true);
+
+  // // NEW — 2 sec delay
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowSplash(false);
+  //   }, 2000);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  // // NEW — if splash is true, only logo show
+  // if (showSplash) {
+  //   return <SplashScreen />;
+  // }
   return (
-    <section className="project-section" id="projects">
+    <>
+
+     <section className="project-section" id="projects">
       <div className="project-overlay"></div>
       <div className="container project-content py-5">
         <h2 className="text-center mb-5 fw-bold" style={{ color: '#ffc107' }}>Projects</h2>
@@ -170,5 +196,7 @@ export default function Project() {
         </div>
       </div>
     </section>
+    </>
+   
   );
 }

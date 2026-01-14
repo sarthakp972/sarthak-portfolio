@@ -1,0 +1,65 @@
+.sarthak-splash-container {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* responsive logo text */
+.sarthak-logo-text {
+  font-weight: 800;
+  letter-spacing: 2px;
+  animation: sarthak-fadeZoom 1.8s ease-in-out;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* desktop size */
+@media (min-width: 992px) {
+  .sarthak-logo-text {
+    font-size: 3rem;
+  }
+}
+
+/* tablet size */
+@media (min-width: 576px) and (max-width: 991px) {
+  .sarthak-logo-text {
+    font-size: 2.3rem;
+  }
+}
+
+/* mobile size */
+@media (max-width: 575px) {
+  .sarthak-logo-text {
+    font-size: 1.8rem;
+  }
+}
+
+/* zoom animation */
+@keyframes sarthak-fadeZoom {
+  0% { opacity: 0; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.9; transform: scale(1); }
+}
+
+/* animated dots */
+.sarthak-dots::after {
+  content: "";
+  animation: sarthak-dotsAnim 1.2s infinite steps(4);
+  margin-left: 4px;
+}
+
+/* dots increase-decrease animation */
+@keyframes sarthak-dotsAnim {
+  0%   { content: ""; }
+  25%  { content: "."; }
+  50%  { content: ".."; }
+  75%  { content: "..."; }
+  100% { content: ""; }
+}

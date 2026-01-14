@@ -6,31 +6,39 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaPhone } from "react-ico
 export default function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const sendEmail = (e) => {
+  e.preventDefault();
 
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    if (!serviceID || !templateID || !publicKey) {
-      alert("Somthing went wrorng");
-      return;
-    }
+  // If EmailJS keys missing
+  if (!serviceID || !templateID || !publicKey) {
+    alert(
+    "This  service is temporarily unavailable due to technical/server issues.\n\n 🙏 Thank you for trying to reach out! \n\n👉 Please reach out to me via:\n\n📧 Email: sarthakpatwa7649@gmail.com\n📱 WhatsApp: 7649062706\n\n💬 Please write: 'I reached out via your portfolio'"
+    );
+    return;
+  }
 
-    emailjs
-      .sendForm(serviceID, templateID, form.current, publicKey)
-      .then(
-        () => {
-          alert("Message sent successfully!");
-          e.target.reset();
-        },
-        (error) => {
-          console.error("EmailJS Error:", error);
-          alert("Failed to send message. Please check your form and try again.");
-        }
-      );
-  };
+  emailjs
+    .sendForm(serviceID, templateID, form.current, publicKey)
+    .then(
+      () => {
+        alert(
+          "Your message has been submitted successfully 🎉\n\nHowever Email service may be delayed.\n\n👉 You can also directly ping me at:\n📧 Email: sarthakpatwa7649@gmail.com\n📱 WhatsApp: 7649062706\n\n💬 Please mention: 'I reached out via your portfolio website'"
+        );
+        e.target.reset();
+      },
+      (error) => {
+        console.error("EmailJS Error:", error);
+   alert(
+    "This  service is temporarily unavailable due to technical/server issues.\n\n 🙏 Thank you for trying to reach out! \n👉 Please reach out to me via:\n\n📧 Email: sarthakpatwa7649@gmail.com\n📱 WhatsApp: 7649062706\n\n💬 Please write: 'I reached out via your portfolio'"
+    );
+      }
+    );
+};
+
 
   return (
     <section className="contact-section py-5" id="contact">

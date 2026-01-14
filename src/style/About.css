@@ -1,27 +1,55 @@
-/* About.css */
 .about-section {
-  background-color: #111;
+  background-color: #0b0b0b;
   color: #fff;
 }
 
-.about-section h2 {
+/* yellow heading glow */
+.glow-text {
   color: #ffc107;
+  text-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
 }
 
-.about-img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border: 5px solid #ffc107;
-  margin-top: 20px;
-}
-
-.lead {
-  font-size: 1.1rem;
+/* subtle paragraph color */
+.lead,
+p {
   color: #ddd;
 }
 
-p {
-  color: #ccc;
-  margin-bottom: 1rem;
+/* section yellow title style */
+.section-title {
+  color: #ffc107;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* smooth fade animation */
+.fade-in {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* slide animation for cards/content */
+.slide-up {
+  animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* animated buttons hover */
+.button-animate a,
+.button-animate .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-animate a:hover,
+.button-animate .btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
 }
